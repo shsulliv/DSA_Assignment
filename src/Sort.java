@@ -1,5 +1,6 @@
 /**
  * Created by shannonsullivan on 7/3/17.
+ * Quick Sort adapted from: http://howtodoinjava.com/algorithm/quicksort-java-example/
  */
 public class Sort {
 

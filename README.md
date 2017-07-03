@@ -15,17 +15,24 @@ For Quick Sort: 5ms elapsed
 By Shannon Sullivan
 
 ## Part I: Analysis of Sorting Algorithms
-To compare the efficiency of different sorting algorithms, I have generated a large array of random numbers. The array was then "copied" using the Java `Array.clone()` method, and passed to the following three sorting algorithms:
+To compare the efficiency of different sorting algorithms, I have generated a large array of random numbers. The array was then "copied" using the Java `Array.clone()` method, and passed to the following four sorting algorithms:
 
 * Bubble sort
 * Insertion sort
 * Merge sort
+* Quick sort
 
 To capture the time necessary to complete the sorting methods I utilized the Java `Date()` object. I applied the `getTime()` method at the start and end of each sorting method call and calculated the time elapsed.
 
-Figure 1 illustrates a comparison of the amount of time elapsed for each of the three algorithms.
+Figure 1 below illustrates a comparison of the amount of time elapsed for each of the three algorithms.
+
 #### Figure 1
 ![alt text](figure_1.png)
+
+Figure 2 illustrates the same comparison of sorting times as a bar graph.
+
+#### Figure 2
+![alt text](figure_2.png)
 
 
 

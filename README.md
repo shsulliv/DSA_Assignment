@@ -89,6 +89,8 @@ and thus it also still has a complexity of `0(n)`.
 
 Design a recursive method for each of the following problems:
 
+### Problem 1
+
 When you cut a pizza, you cut along a diameter of the pizza. Let Pizza(n) be the number of slices of pizza that exist after you have made n cuts, where n ≥ 1. For example, Pizza(2) = 4 because there are four slices after two diagonal cuts.
 
 Pseudocode:
@@ -108,6 +110,9 @@ slicePizza(4)
 2 * 2 * slicePizza(2)
 2 * 2 * 2 * 2 = 16
 ```
+
+### Problem 2
+
 A bunch of motorcycles and cars want to parallel park on a street. The street can fit n motorcycles, but one car take up three motorcycle spaces. Let A(n) be the number of arrangements of cars and motorcycles on a street that fits n motorcycles.
 
 Pseudocode:
@@ -130,7 +135,7 @@ A(6)
 A(5) + A(3)
 (A(4) + A(2)) + 2
 ((A(3) + A(1)) + 1) + 2
-((2 + 1) + 1) + 2
+((2 + 1) + 1) + 2 = 6
 ```
 
 

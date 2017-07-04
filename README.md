@@ -1,16 +1,3 @@
-For Bubble Sort: 237ms elapsed 
-For Insertion Sort: 28ms elapsed 
-For Merge Sort: 4ms elapsed 
-For Quick Sort: 3ms elapsed 
-For Bubble Sort: 5361ms elapsed 
-For Insertion Sort: 479ms elapsed 
-For Merge Sort: 7ms elapsed 
-For Quick Sort: 3ms elapsed 
-For Bubble Sort: 16654ms elapsed 
-For Insertion Sort: 1888ms elapsed 
-For Merge Sort: 14ms elapsed 
-For Quick Sort: 5ms elapsed 
-
 # Data Structures and Algorithms Coursework
 By Shannon Sullivan
 

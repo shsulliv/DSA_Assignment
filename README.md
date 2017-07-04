@@ -59,7 +59,7 @@ In the output, order of numbers can be changed, i.e., in the above example 34 ca
 
 Pseudocode:
 ```
-input = {12, 34, 45, 9, 8, 90, 3}
+input = A[12, 34, 45, 9, 8, 90, 3]
 lowIndex = 0
 highIndex = input.length - 1
 
@@ -84,4 +84,53 @@ is directly proportional to the number of input data, resulting in a linear comp
 If we consider `n` to be the number of elements in the input array, then the maximum number of operations
 this algorithm can have is `n`. In the best case scenario, the loop will still check every element in the array
 and thus it also still has a complexity of `0(n)`.
+
+## Part III: Recursion
+
+Design a recursive method for each of the following problems:
+
+When you cut a pizza, you cut along a diameter of the pizza. Let Pizza(n) be the number of slices of pizza that exist after you have made n cuts, where n ≥ 1. For example, Pizza(2) = 4 because there are four slices after two diagonal cuts.
+
+Pseudocode:
+```$xslt
+slicePizza(n) do
+    if n = 1 do
+        return 2 // base case
+    end if
+    
+    return 2 * slicePizza(n-1) // recursive call
+end
+```
+Example call:
+```$xslt
+slicePizza(4)
+2 * slicePizza(3)
+2 * 2 * slicePizza(2)
+2 * 2 * 2 * 2 = 16
+```
+A bunch of motorcycles and cars want to parallel park on a street. The street can fit n motorcycles, but one car take up three motorcycle spaces. Let A(n) be the number of arrangements of cars and motorcycles on a street that fits n motorcycles.
+
+Pseudocode:
+```$xslt
+A(n) do
+    if n = 1 or n = 2 do
+        return 1
+    end if
+    
+    if n = 3 do     
+        return 2 
+    end if
+
+    return A(n-1) + A(n-3)  // recursive call
+end
+```
+Example Call:
+```$xslt
+A(6)
+A(5) + A(3)
+(A(4) + A(2)) + 2
+((A(3) + A(1)) + 1) + 2
+((2 + 1) + 1) + 2
+```
+
 

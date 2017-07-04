@@ -26,7 +26,7 @@ To capture the time necessary to complete the sorting methods I utilized the Jav
 
 #### Figure 1
 ![alt text](figure_1.png)
-Figure 1 below illustrates a comparison of the amount of time elapsed for each of the three algorithms.
+Figure 1 illustrates a comparison of the amount of time elapsed for each of the three algorithms.
 
 #### Figure 2
 ![alt text](figure_2.png)
@@ -45,4 +45,43 @@ reason, Insertion Sort also shares a complexity of `O(n^2)`.
 In contrast, the Merge Sort and Quick Sort algorithms remained relatively linear as the data inputs increased, to the point where their plot points are indistinguishable
 from each other on both charts. Both of these algorithms boast a complexity of `O(n log n)`.
 
+## Part II: Segregate Even and Odd numbers 
+
+Given an array A[ ], write an algorithm in pseudocode that segregates even and odd numbers. The algorithm should put all even numbers first, and then odd numbers. 
+
+Example: 
+```
+Input  = {12, 34, 45, 9, 8, 90, 3} 
+Output = {12, 34, 8, 90, 45, 9, 3}
+```
+
+In the output, order of numbers can be changed, i.e., in the above example 34 can come before 12 and 3 can come before 9. 
+
+Pseudocode:
+```
+input = {12, 34, 45, 9, 8, 90, 3}
+lowIndex = 0
+highIndex = input.length - 1
+
+while lowIndex != highIndex do
+    if input[lowIndex] % 2 != 0 do
+        while input[highIndex] % 2 != 0 do
+            highIndex ← highIndex - 1
+        end while
+        
+        temp ← input[lowIndex] // odd number gets stored in temporary variable
+        input[lowIndex] ← input[highIndex]
+        input[highIndex] ← temp
+    end if
+    
+   lowIndex ← lowIndex + 1
+end while
+
+```
+### Reflection
+In terms of complexity, the number of operations required to complete this program
+is directly proportional to the number of input data, resulting in a linear complexity or `O(n)`.
+If we consider `n` to be the number of elements in the input array, then the maximum number of operations
+this algorithm can have is `n`. In the best case scenario, the loop will still check every element in the array
+and thus it also still has a complexity of `0(n)`.
 
